@@ -1,0 +1,163 @@
+%-------------------------
+% Resume in Latex
+% Author : Jagadish R
+% License : MIT
+%------------------------
+\documentclass[11pt]{extarticle}
+\usepackage[colorlinks=true,linkcolor=blue,filecolor=magenta,urlcolor=blue,pdftitle={Jagadish R - Resume},pdfpagemode=FullScreen]{hyperref}
+\usepackage{fontawesome}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+\usetikzlibrary{calc}
+
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{-2.1pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Jagadish R} 
+  
+  \\ \faEnvelope\href{mailto:jagadishr6300@gmail.com}{: jagadishr6300@gmail.com} &
+  
+ \faGithub \href{https://github.com/jagadish-ravichandran}{: github.com/jagadish-ravichandran}
+  \\
+ \faMobile : +91 9597867439  &
+   \faLinkedin \href{https://www.linkedin.com/in/jagadish-r-b4822b216/}{: linkedin.com/jagadish-r}
+
+\begin{tikzpicture}[remember picture,overlay]
+\clip ($(current page text area.north east)!0.03!(current page text area.south east)!0.06!(current page text area.north west)$)
+  circle (1.5cm) node {\includegraphics[width=0.14\linewidth]{Jagadish.jpg}};
+\end{tikzpicture}
+\end{tabular*}
+
+%-----------Summary----------------
+\section{Summary}
+  \hspace{5mm} I'm a detail-oriented junior software developer who loves tackling challenging problems and has a strong coding foundation. I adhere to industry-standard architecture and best coding practices, thriving in collaborative environments and consistently delivering results under pressure. Strong collaborator with a track record of delivering on-time and on-budget projects and initiatives.
+
+%-----------EDUCATION----------------
+\section{Education}
+\vspace{2mm}
+  \resumeSubHeadingListStart
+   \resumeSubheading
+      {SSN College Of Engineering}{Chennai}
+      {BE in Computer Science and Engineering; GPA: 8.38}{Aug 2019 - Jun 2023}
+      
+  \resumeSubHeadingListEnd
+
+
+%-----------SKILLS-----------------
+\section{Skills \& Competencies}
+\vspace{3mm}
+  \resumeSubHeadingListStart
+  \resumeSubItem{Languages: }
+      {C, Java, Python, Bash Script, SQL, MongoDB, HTML, CSS, Javascript}
+      \resumeSubItem{Technologies: }
+      {Spring Boot, Node.js, Django, Flask, React.js, Docker, Jenkins, Rest API, Graphql}
+      \resumeSubItem{Competencies: }
+      {Security \& Authentication Protocols, Agile Methodologies \& Cross-Team Collaboration, Continuous Integration \& Deployment Processes, Troubleshooting \& Debugging}
+
+ \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Work Experience}
+\resumeSubHeadingListStart
+\resumeSubheading
+   {Associate Engineer at Crayon Data}{Hybrid}
+    {Junior Backend Developer}{Aug 2023 - Present}
+
+ \resumeItemListStart
+        \item{Developed GraphQL APIs for a configuration-driven mobile application using Hasura, enabling efficient and flexible data retrieval.}
+        \item{Built an automated email notification service in Spring Boot with retry mechanisms for improved reliability and fault tolerance.}
+        \item{Contributed to scalable backend services for a digital banking platform, including security enhancements through code obfuscation.}
+        \item{Optimized database performance through schema normalization, indexing strategies, and PL/SQL-based business logic implementation.}
+        \item{Participated in design discussions and code reviews, maintaining high standards of code quality and engineering practices.}
+      \resumeItemListEnd
+
+\resumeSubheading
+   {Inoesis Technologies — Software Developer Intern}{Remote}
+    {Intern}{Aug 2021 - Feb 2022}
+
+ \resumeItemListStart
+        \item{Implemented Django-based REST APIs and integrated Twilio Video APIs for teleconsultation and appointment management features in healthcare applications.}
+      \resumeItemListEnd
+       
+ \resumeSubHeadingListEnd
+ 
+ 
+ % -----------PROJECTS-----------------
+\section{Projects}
+\vspace{2mm}
+      \href{https://personal-expense-tracker-simple.vercel.app/}{\textbf{Personal Expense Tracker}} — Expense tracking app built with Flask and PostgreSQL featuring a category-based dashboard, monthly breakdowns, and CI/CD on Vercel. \hfill \textbf{2022}
+      
+      \vspace{2mm}
+      \href{https://telegram.me/form_telebot}{\textbf{Form Bot}} — Built a form automation platform leveraging Python, Telegram Bot API, and PostgreSQL for creating forms and managing user responses through Telegram. \hfill \textbf{2021}
+      
+      
+  
+%-------------------------------------------
+\end{document}
