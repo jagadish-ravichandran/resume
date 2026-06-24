@@ -5,7 +5,7 @@ This repository contains the LaTeX source for my professional resume.
 ## Files
 
 * `main.tex` – Resume source file
-* `Jagadish Ravichandran - Resume.pdf` – Generated resume
+* `Jagadish_Ravichandran_Resume.pdf` – Generated resume
 
 ## Build
 
