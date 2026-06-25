@@ -7,7 +7,7 @@
 \usepackage[colorlinks=true,linkcolor=blue,filecolor=magenta,urlcolor=blue,pdftitle={Jagadish Ravichandran - Resume},pdfpagemode=FullScreen]{hyperref}
 \usepackage{fontawesome}
 \usepackage{latexsym}
-\usepackage[empty]{fullpage}
+\usepackage[left=0.65in, right=0.65in, top=0.5in, bottom=0.35in]{geometry}
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
@@ -21,14 +21,7 @@
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{-2.1pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.375in}
-\addtolength{\evensidemargin}{-0.375in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\renewcommand{\footrulewidth}{0pt}
 
 \urlstyle{same}
 
@@ -38,7 +31,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-8pt}\scshape\raggedright\large
+  \vspace{-6pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
 
 %-------------------------
@@ -61,9 +54,9 @@
 
 \renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,itemsep=2pt,parsep=0pt]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,itemsep=1pt,parsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,itemsep=2pt]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,itemsep=1pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
@@ -86,7 +79,7 @@
 
 \end{tabular*}
 
-\vspace{3mm}
+\vspace{2mm}
 
 %-----------Summary----------------
    \hspace{5mm} Software Engineer focused on delivering resilient, maintainable, and business-aligned software solutions. Experienced in designing domain-driven backend systems, balancing engineering quality, technical trade-offs, and delivery timelines to support reliable software releases. Passionate about understanding business domains and building scalable products that solve real-world problems.
@@ -94,32 +87,32 @@
 %-----------EXPERIENCE-----------------
 \section{Work Experience}
 \resumeSubHeadingListStart
-\vspace{-1pt}\item
+\vspace{0pt}\item
   \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{Axelate Solutions — Software Engineer} & \textit{\small Hybrid | Jun 2025 - Jun 2026} \\
-  \end{tabular*}\vspace{-5pt}
+  \end{tabular*}\vspace{-2pt}
 
  \resumeItemListStart
         \item{Developed domain-driven backend services for a multi-tenant B2B SaaS platform using Java 21, Spring Boot, and Spring Modulith, applying Domain-Driven Design to model business capabilities and enforce modular boundaries, enabling independent feature evolution and preparing the platform for future microservice adoption.}
         \item{Developed secure access controls, managed PostgreSQL schema evolution, and maintained engineering quality using JWT, OTP, DPoP, Liquibase, automated testing, and quality gates to protect customer data, support reliable product evolution, and increase release confidence.}
         \item{Led the delivery of integrations with external business platforms, working closely with stakeholders and third-party vendors to interpret requirements, navigate ambiguous API documentation, resolve production issues, and implement reliable solutions supporting critical business operations.}
-        \item{Applied AI-assisted engineering practices using spec-driven development, Claude Code, and MCP-integrated GitHub and Jira workflows to accelerate software delivery, improve developer productivity, and maintain human oversight of technical decisions.}
+        \item{Applied AI-native development practices across engineering workflows, creating domain-focused documentation, commands, and guidelines that enabled context-aware AI assistance, accelerated delivery, and improved consistency across the team.}
       \resumeItemListEnd
 
-\vspace{-1pt}\item
+\vspace{0pt}\item
   \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{Crayon Data — Associate Software Engineer} & \textit{\small Hybrid | Aug 2023 - Jun 2025} \\
-  \end{tabular*}\vspace{-5pt}
+  \end{tabular*}\vspace{-2pt}
 
  \resumeItemListStart
         \item{Developed GraphQL APIs using Hasura for a configuration-driven mobile platform and built a fault-tolerant Spring Boot email notification service with automated retry mechanisms, improving data access efficiency and operational reliability.}
         \item{Enhanced performance and security for a digital banking platform through database optimization, PL/SQL development, and application code protection techniques.}
       \resumeItemListEnd
 
-\vspace{-1pt}\item
+\vspace{0pt}\item
   \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{Inoesis Technologies — Software Developer Intern} & \textit{\small Remote | Aug 2021 - Feb 2022} \\
-  \end{tabular*}\vspace{-5pt}
+  \end{tabular*}\vspace{-2pt}
 
  \resumeItemListStart
         \item{Implemented Django-based REST APIs and integrated Twilio Video APIs for teleconsultation and appointment management features in healthcare applications.}
@@ -132,7 +125,7 @@
 \section{Projects and Certifications}
       \href{https://personal-expense-management-app.onrender.com}{\textbf{Personal Expense Tracker}\ \faExternalLink} — Built a Flask and PostgreSQL-based expense tracking application with analytics dashboards, monthly insights, and automated CI/CD deployment, serving a growing user base.
       
-      \vspace{2mm}
+      \vspace{1mm}
       \href{https://telegram.me/formspot_bot}{\textbf{Form Bot}\ \faExternalLink} — Developed a Telegram-based form automation platform using Python, Telegram Bot API, and PostgreSQL, enabling efficient form creation and response management for active users.
       
       
