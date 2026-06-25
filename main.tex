@@ -39,7 +39,7 @@
 % Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
 
 %-------------------------
 % Custom commands
@@ -61,7 +61,7 @@
 
 \renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,itemsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -86,40 +86,10 @@
 
 \end{tabular*}
 
-%-----------Summary----------------
-\section{Summary}
-   \hspace{5mm} Software Engineer focused on delivering resilient, maintainable, and business-aligned software solutions. Experienced in designing domain-driven backend systems, balancing engineering quality, technical trade-offs, and delivery timelines to support reliable software releases. Passionate about understanding business domains and building scalable products that solve real-world problems.
-
-%-----------EDUCATION----------------
-\section{Education}
-\vspace{2mm}
-  \resumeSubHeadingListStart
-   \resumeSubheading
-      {SSN College Of Engineering}{Chennai}
-      {BE in Computer Science and Engineering; GPA: 8.38}{Aug 2019 - Jun 2023}
-      
-  \resumeSubHeadingListEnd
-
-
-%-----------SKILLS-----------------
-\section{Skills \& Competencies}
 \vspace{3mm}
-  \resumeSubHeadingListStart
-  \resumeSubItem{Languages: }
-      {Java, Python, SQL, JavaScript, Bash, C}
-      \resumeSubItem{Frameworks \& Technologies: }
-      {Spring Boot, Spring Security, Spring Data JPA, React.js, Node.js, Django, Flask, GraphQL}
-      \resumeSubItem{Databases \& Storage: }
-      {PostgreSQL, MongoDB, MinIO}
-      \resumeSubItem{Cloud \& DevOps: }
-      {Docker, GitHub Actions, Jenkins, DigitalOcean, CI/CD, GitFlow}
-      \resumeSubItem{Testing \& Quality: }
-      {JUnit, Cucumber, Testcontainers, WireMock, SonarCloud}
-      \resumeSubItem{AI-Assisted Development: }
-      {Spec-driven development, spec-to-code workflows, AI-assisted engineering (Claude Code/Web/Skills), MCP integrations with GitHub \& Jira, human-in-the-loop review process}
 
- \resumeSubHeadingListEnd
-
+%-----------Summary----------------
+   \hspace{5mm} Software Engineer focused on delivering resilient, maintainable, and business-aligned software solutions. Experienced in designing domain-driven backend systems, balancing engineering quality, technical trade-offs, and delivery timelines to support reliable software releases. Passionate about understanding business domains and building scalable products that solve real-world problems.
 
 %-----------EXPERIENCE-----------------
 \section{Work Experience}
@@ -127,67 +97,68 @@
 \vspace{-1pt}\item
   \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{Axelate Solutions — Software Engineer} & \textit{\small Hybrid | Jun 2025 - Jun 2026} \\
-  \end{tabular*}\vspace{-5pt}
+  \end{tabular*}\vspace{-8pt}
 
  \resumeItemListStart
-        \item{Developed domain-driven backend services for a multi-tenant B2B SaaS platform using Java 21 and Spring Boot, implementing rich domain models while keeping business logic independent from application and infrastructure concerns.}
-        \item{Owned database schema evolution using PostgreSQL and Liquibase, ensuring data integrity, backward compatibility, and seamless production deployments.}
-        \item{Developed tenant-aware security capabilities, integrating JWT, OTP, and DPoP authentication while enforcing domain-level and database-level tenant isolation.}
+        \item{Developed domain-driven backend services for a multi-tenant B2B SaaS platform using Java 21 and Spring Boot, designing rich domain models with clear separation of concerns, while managing PostgreSQL schema evolution through Liquibase to ensure data integrity, backward compatibility, and reliable production deployments.}
+        \item{Developed tenant-aware security capabilities with JWT, OTP, and DPoP authentication, enforcing tenant isolation across domain and database layers while maintaining high engineering quality through behavior-driven testing, Testcontainers, WireMock, SonarCloud quality gates, and end-to-end observability.}
         \item{Led the delivery of integrations with external business platforms, working closely with stakeholders and third-party vendors to interpret requirements, navigate ambiguous API documentation, resolve production issues, and implement reliable solutions supporting critical business operations.}
-        \item{Established high engineering quality standards through behavior-driven testing, Testcontainers, WireMock, SonarCloud quality gates, and end-to-end observability.}
-        \item{Implemented CI/CD pipelines and cloud deployments using GitHub Actions, GitFlow, and DigitalOcean, utilizing App Platform, Container Registry, Managed PostgreSQL, and S3-compatible object storage to support reliable and scalable application delivery.}
+        \item{Applied AI-native engineering practices, including spec-driven development, Claude Code, and MCP-integrated workflows with GitHub and Jira, to accelerate solution design, implementation, refactoring, and delivery while maintaining human oversight of technical decisions.}
       \resumeItemListEnd
 
 \vspace{-1pt}\item
   \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{Crayon Data — Associate Software Engineer} & \textit{\small Hybrid | Aug 2023 - Jun 2025} \\
-  \end{tabular*}\vspace{-5pt}
+  \end{tabular*}\vspace{-8pt}
 
  \resumeItemListStart
-        \item{Developed GraphQL APIs using Hasura for a configuration-driven mobile application, enabling flexible and efficient data retrieval.}
-        \item{Built an automated email notification service in Spring Boot with retry mechanisms to improve reliability and fault tolerance.}
-        \item{Enhanced backend performance and security for a digital banking platform through database optimization, PL/SQL development, and code obfuscation techniques.}
+        \item{Developed GraphQL APIs using Hasura for a configuration-driven mobile platform and built a fault-tolerant Spring Boot email notification service with automated retry mechanisms, improving data access efficiency and operational reliability.}
+        \item{Enhanced performance and security for a digital banking platform through database optimization, PL/SQL development, and application code protection techniques.}
       \resumeItemListEnd
 
 \vspace{-1pt}\item
   \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{Inoesis Technologies — Software Developer Intern} & \textit{\small Remote | Aug 2021 - Feb 2022} \\
-  \end{tabular*}\vspace{-5pt}
+  \end{tabular*}\vspace{-8pt}
 
  \resumeItemListStart
         \item{Implemented Django-based REST APIs and integrated Twilio Video APIs for teleconsultation and appointment management features in healthcare applications.}
       \resumeItemListEnd
-       
+        
  \resumeSubHeadingListEnd
  
  
- %-----------AI-NATIVE DEVELOPMENT-----------------
-\section{AI-Native Software Development Practices}
-\vspace{2mm}
-\resumeSubHeadingListStart
-
-\vspace{-1pt}\item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{AI-Augmented Development Workflow} & \textit{\small 2025 - 2026} \\
-  \end{tabular*}\vspace{-5pt}
-
- \resumeItemListStart
-        \item{Applied spec-driven development workflows to transform product requirements into implementation plans, test cases, and deliverable software.}
-        \item{Leveraged Claude Code, Claude Web, and Claude Skills for AI-assisted design, implementation, refactoring, and engineering automation.}
-        \item{Integrated MCP tools with GitHub and Jira to enable context-aware development across code, issues, and pull requests.}
-        \item{Established a human-in-the-loop review process to validate AI-generated plans, code, and architectural decisions before delivery.}
-      \resumeItemListEnd
- 
- \resumeSubHeadingListEnd
- 
- 
- % -----------PROJECTS-----------------
-\section{Projects}
-\vspace{2mm}
+ %-----------PROJECTS AND CERTIFICATIONS-----------------
+\section{Projects and Certifications}
       \href{https://personal-expense-management-app.onrender.com}{\textbf{Personal Expense Tracker}} — Expense tracking app built with Flask and PostgreSQL featuring a category-based dashboard, monthly breakdowns, and CI/CD on Vercel. \hfill \textbf{2022}
       
       \vspace{2mm}
       \href{https://telegram.me/formspot_bot}{\textbf{Form Bot}} — Built a form automation platform leveraging Python, Telegram Bot API, and PostgreSQL for creating forms and managing user responses through Telegram. \hfill \textbf{2021}
+      
+      
+%-----------SKILLS-----------------
+\section{Skills \& Competencies}
+  \resumeSubHeadingListStart
+  \resumeSubItem{Core Technologies: }
+      {Java, Python, SQL, JavaScript, PostgreSQL, MongoDB, MinIO, Bash}
+      \resumeSubItem{Frameworks: }
+      {Spring Boot, Spring Security, Spring Data JPA, GraphQL, React.js, Node.js, Django, Flask}
+      \resumeSubItem{Engineering Practices: }
+      {SonarCloud, CI/CD, Docker, GitHub Actions, JUnit, Cucumber, Testcontainers, WireMock}
+      \resumeSubItem{AI-Assisted Development: }
+      {Spec-Driven Development, Claude Code, AI-Assisted Software Engineering, MCP (GitHub \& Jira Integration), Human-in-the-Loop Review}
+
+ \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION----------------
+\section{Education}
+  \resumeSubHeadingListStart
+   \resumeSubheading
+      {SSN College Of Engineering}{Chennai}
+      {BE in Computer Science and Engineering; GPA: 8.38}{Aug 2019 - Jun 2023}
+      
+  \resumeSubHeadingListEnd
       
       
   
