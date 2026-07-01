@@ -1,6 +1,4 @@
 \documentclass[a4paper,10pt]{article}
-
-% ---------- Packages ----------
 \usepackage[utf8]{inputenc}
 \usepackage[top=1.27cm,bottom=1cm,left=1.27cm,right=1.27cm]{geometry}
 \usepackage{enumitem}
@@ -8,42 +6,22 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{array}
-
-% ---------- Colors ----------
 \definecolor{primary}{HTML}{1A1A1A}
 \definecolor{accent}{HTML}{2E5B8A}
-
-% ---------- Hyperlinks ----------
-\hypersetup{
-    colorlinks=true,
-    urlcolor=accent,
-    linkcolor=accent
-}
-
-% ---------- Spacing ----------
+\hypersetup{colorlinks=true,urlcolor=accent,linkcolor=accent}
 \setlength{\parindent}{0pt}
 \pagestyle{empty}
-
-% ---------- Section formatting ----------
 \titleformat{\section}
   {\large\bfseries\color{primary}}
   {}{0em}{}[\vspace{-0.6em}\color{accent}\rule{\linewidth}{1pt}\vspace{-0.42em}]
 \titlespacing{\section}{0pt}{5pt}{4pt}
-
-% ---------- List formatting ----------
 \setlist[itemize]{leftmargin=1.2em, topsep=0pt, itemsep=1pt, parsep=0pt, label=\textbullet}
-
-% ---------- Custom commands ----------
-% Job entry: {Company}{Role}{Location/Mode}{Dates}
 \newcommand{\jobentry}[4]{%
   \vspace{6pt}
   \noindent\textbf{#1} \hfill \textbf{#4}\\[2pt]
   \textit{#2} \hfill \textit{#3}\par
 }
-
 \begin{document}
-
-% ============ HEADER ============
 \begin{center}
     {\LARGE\bfseries\color{primary} Jagadish R}\\[4pt]
     {\small
@@ -54,53 +32,41 @@
     \href{https://github.com/jagadish-ravichandran}{github.com/jagadish-ravichandran}
     }
 \end{center}
-
-% ============ SUMMARY ============
 \section*{Summary}
 \vspace{6pt}
 \noindent Software Engineer with 3+ years building domain-driven, multi-tenant-ready backend systems in Java, Spring Boot, and PostgreSQL. Focused on scalable, maintainable services, secure APIs, and reliable releases across B2B SaaS and fintech products. Strong interest in mapping business domains to clean, evolvable architecture.
-
-% ============ EXPERIENCE ============
 \section*{Work Experience}
-
-\jobentry{Axelate Solutions}{Software Engineer}{Hybrid}{Jun 2025 -- Present}
+\jobentry{Axelate Solutions}{Software Engineer}{Chennai (Hybrid)}{Jun 2025 -- Present}
 \begin{itemize}
     \item Built a multi-tenant-ready, domain-driven modular backend (Java 21, Spring Boot, Spring Modulith, PostgreSQL) supporting the complete rental lifecycle, modeling \textbf{8+} business domains and powering \textbf{3+} applications from one unified backend with clear module boundaries for future microservices decomposition.
     \item Implemented sender-constrained access controls (JWT, OTP, DPoP) and rate limiting across \textbf{20+} auth endpoints, aligned with OWASP guidelines and achieving a passing SonarCloud security gate with \textbf{zero security hotspots}, enabling confident customer onboarding.
-    \item Delivered integrations with \textbf{5} external business platforms, working with vendors to resolve ambiguous API contracts and production issues supporting critical operations.
+    \item Delivered integrations with \textbf{5} external business platforms, partnering directly with vendor teams to reconcile ambiguous API contracts and unblock production issues supporting critical operations.
     \item Reduced requirement ambiguity and engineering rework by introducing a 5-stage AI-assisted specification-driven workflow (Specification $\to$ Analysis $\to$ Brainstorming $\to$ Implementation $\to$ Code Review), embedding business context, architectural guidelines, and quality gates into development --- cutting code-review iterations by \textbf{$\sim$30\%} and feature rework by \textbf{$\sim$25\%}.
 \end{itemize}
-
-\jobentry{Crayon Data}{Associate Software Engineer}{Hybrid}{Aug 2023 -- Jun 2025}
+\jobentry{Crayon Data}{Associate Software Engineer}{Chennai (Hybrid)}{Aug 2023 -- Jun 2025}
 \begin{itemize}
     \item Built a configuration-driven GraphQL layer (Hasura) over templated backend views, exposing per-screen queries that fetch only required fields --- reducing API calls per screen from \textbf{5 to 1} (\textbf{$\sim$80\%} fewer round-trips) and enabling new screens to ship via configuration without backend redeployment.
     \item Built asynchronous day-end transaction pipelines (Apache ActiveMQ Artemis) delivering mandatory regulatory reporting to an external API, processing \textbf{thousands of transactions} per day-end batch while decoupling the platform from third-party API latency and ensuring retry-safe delivery.
     \item Optimized PL/SQL and database performance for a high-volume travel-booking platform, reducing agent-facing report generation from \textbf{$\sim$90s to $\sim$10s} and cutting query execution time by \textbf{$\sim$50\%} on large flight and hotel datasets.
 \end{itemize}
-
 \jobentry{Inoesis Technologies}{Software Developer Intern}{Remote}{Aug 2021 -- Feb 2022}
 \begin{itemize}
-    \item Built \textbf{10+} Django REST API endpoints and integrated Twilio Video for teleconsultation and appointment-management features in a healthcare application, working full-stack with Django's server-side templating.
+    \item Built \textbf{10+} Django REST API endpoints and integrated Twilio Video for teleconsultation and appointment-management in a healthcare application, delivering full-stack features.
 \end{itemize}
-
-% ============ PROJECTS ============
 \section*{Projects}
 \vspace{6pt}
 \begin{itemize}
-    \item \textbf{Personal Expense Tracker} --- Flask + PostgreSQL expense tracker with server-side rendered templates and a clean, minimal UI, self-deployed via automated CI/CD.
+    \item \textbf{Personal Expense Tracker} --- Flask + PostgreSQL expense tracker with server-side rendered templates and a clean, minimal UI, deployed through a self-built automated CI/CD pipeline.
     \item \textbf{Form Bot} --- Telegram bot (Python, Telegram Bot API, PostgreSQL) for lightweight form creation and response collection between creators and responders.
 \end{itemize}
-
-% ============ SKILLS ============
 \section*{Skills \& Competencies}
 \vspace{6pt}
 \noindent\textbf{Core Technologies:} Java, Python, SQL, JavaScript, PostgreSQL, MongoDB, MinIO, Bash\par\vspace{3pt}
-\noindent\textbf{Frameworks:} Spring Boot, Spring Security, Spring Data JPA, GraphQL, React.js, Node.js, Django, Flask\par\vspace{3pt}
-\noindent\textbf{Engineering Practices:} CI/CD, Docker, GitHub Actions, SonarCloud, Liquibase, JUnit, Cucumber, Testcontainers, WireMock\par\vspace{3pt}
+\noindent\textbf{Frameworks \& APIs:} Spring Boot, Spring Security, Spring Data JPA, REST APIs, GraphQL, React.js, Node.js, Django, Flask\par\vspace{3pt}
+\noindent\textbf{Software Design:} Object-Oriented Design, Design Patterns, Clean Architecture, Domain-Driven Design\par\vspace{3pt}
+\noindent\textbf{Testing:} Unit Testing, Integration Testing (JUnit, Cucumber, Testcontainers, WireMock)\par\vspace{3pt}
+\noindent\textbf{Engineering Practices:} CI/CD, Docker, GitHub Actions, SonarCloud, Liquibase, Agile, Scrum\par\vspace{3pt}
 \noindent\textbf{AI-Native Development:} Spec-Driven Development, Claude Code, MCP (GitHub \& Jira), Human Oversight\par
-
-% ============ EDUCATION ============
 \section*{Education}
 \jobentry{SSN College of Engineering, Chennai}{BE in Computer Science and Engineering --- GPA: 8.38}{}{Aug 2019 -- Jun 2023}
-
 \end{document}
