@@ -1,159 +1,106 @@
-%-------------------------
-% Resume in Latex
-% Author : Jagadish R
-% License : MIT
-%------------------------
-\documentclass[11pt]{extarticle}
-\usepackage[colorlinks=true,linkcolor=blue,filecolor=magenta,urlcolor=blue,pdftitle={Jagadish Ravichandran - Resume},pdfpagemode=FullScreen]{hyperref}
-\usepackage{fontawesome}
-\usepackage{latexsym}
-\usepackage[left=0.65in, right=0.65in, top=0.5in, bottom=0.35in]{geometry}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
+\documentclass[a4paper,10pt]{article}
+
+% ---------- Packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[top=1.27cm,bottom=1cm,left=1.27cm,right=1.27cm]{geometry}
 \usepackage{enumitem}
-\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{array}
 
+% ---------- Colors ----------
+\definecolor{primary}{HTML}{1A1A1A}
+\definecolor{accent}{HTML}{2E5B8A}
 
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-6pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2}
-  }
+% ---------- Hyperlinks ----------
+\hypersetup{
+    colorlinks=true,
+    urlcolor=accent,
+    linkcolor=accent
 }
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+% ---------- Spacing ----------
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% ---------- Section formatting ----------
+\titleformat{\section}
+  {\large\bfseries\color{primary}}
+  {}{0em}{}[\vspace{-0.6em}\color{accent}\rule{\linewidth}{1pt}\vspace{-0.42em}]
+\titlespacing{\section}{0pt}{5pt}{4pt}
+
+% ---------- List formatting ----------
+\setlist[itemize]{leftmargin=1.2em, topsep=0pt, itemsep=1pt, parsep=0pt, label=\textbullet}
+
+% ---------- Custom commands ----------
+% Job entry: {Company}{Role}{Location/Mode}{Dates}
+\newcommand{\jobentry}[4]{%
+  \vspace{6pt}
+  \noindent\textbf{#1} \hfill \textbf{#4}\\[2pt]
+  \textit{#2} \hfill \textit{#3}\par
 }
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}}
-
-\renewcommand{\labelitemii}{$\circ$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,itemsep=1pt,parsep=0pt]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,itemsep=1pt]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \begin{document}
 
-%----------HEADING-----------------
+% ============ HEADER ============
+\begin{center}
+    {\LARGE\bfseries\color{primary} Jagadish R}\\[4pt]
+    {\small
+    Chennai, India \quad$\vert$\quad
+    +91 9597867439 \quad$\vert$\quad
+    \href{mailto:jagadishr6300@gmail.com}{jagadishr6300@gmail.com}\\[3pt]
+    \href{https://www.linkedin.com/in/jagadish-r-b4822b216}{linkedin.com/in/jagadish-r-b4822b216} \quad$\vert$\quad
+    \href{https://github.com/jagadish-ravichandran}{github.com/jagadish-ravichandran}
+    }
+\end{center}
 
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \href{https://portfolio-v0cu.onrender.com}{\textbf{\Large Jagadish R}\ \faExternalLink} 
-  
-  \\ \faEnvelope\href{mailto:jagadishr6300@gmail.com}{: jagadishr6300@gmail.com} &
-  
- \faGithub \href{https://github.com/jagadish-ravichandran}{: github.com/jagadish-ravichandran\ \faExternalLink}
-  \\
- \faMobile : +91 9597867439  &
-   \faLinkedin \href{https://www.linkedin.com/in/jagadish-r-b4822b216/}{: linkedin.com/jagadish-r\ \faExternalLink}
+% ============ SUMMARY ============
+\section*{Summary}
+\vspace{6pt}
+\noindent Software Engineer with 3+ years building domain-driven, multi-tenant-ready backend systems in Java, Spring Boot, and PostgreSQL. Focused on scalable, maintainable services, secure APIs, and reliable releases across B2B SaaS and fintech products. Strong interest in mapping business domains to clean, evolvable architecture.
 
-\end{tabular*}
+% ============ EXPERIENCE ============
+\section*{Work Experience}
 
-\vspace{2mm}
+\jobentry{Axelate Solutions}{Software Engineer}{Hybrid}{Jun 2025 -- Present}
+\begin{itemize}
+    \item Built a multi-tenant-ready, domain-driven modular backend (Java 21, Spring Boot, Spring Modulith, PostgreSQL) supporting the complete rental lifecycle, modeling \textbf{8+} business domains and powering \textbf{3+} applications from one unified backend with clear module boundaries for future microservices decomposition.
+    \item Implemented sender-constrained access controls (JWT, OTP, DPoP) and rate limiting across \textbf{20+} auth endpoints, aligned with OWASP guidelines and achieving a passing SonarCloud security gate with \textbf{zero security hotspots}, enabling confident customer onboarding.
+    \item Delivered integrations with \textbf{5} external business platforms, working with vendors to resolve ambiguous API contracts and production issues supporting critical operations.
+    \item Reduced requirement ambiguity and engineering rework by introducing a 5-stage AI-assisted specification-driven workflow (Specification $\to$ Analysis $\to$ Brainstorming $\to$ Implementation $\to$ Code Review), embedding business context, architectural guidelines, and quality gates into development --- cutting code-review iterations by \textbf{$\sim$30\%} and feature rework by \textbf{$\sim$25\%}.
+\end{itemize}
 
-%-----------Summary----------------
-   \hspace{5mm} Software Engineer focused on delivering resilient, maintainable, and business-aligned software solutions. Experienced in designing domain-driven backend systems, balancing engineering quality, technical trade-offs, and delivery timelines to support reliable software releases. Passionate about understanding business domains and building scalable products that solve real-world problems.
+\jobentry{Crayon Data}{Associate Software Engineer}{Hybrid}{Aug 2023 -- Jun 2025}
+\begin{itemize}
+    \item Built a configuration-driven GraphQL layer (Hasura) over templated backend views, exposing per-screen queries that fetch only required fields --- reducing API calls per screen from \textbf{5 to 1} (\textbf{$\sim$80\%} fewer round-trips) and enabling new screens to ship via configuration without backend redeployment.
+    \item Built asynchronous day-end transaction pipelines (Apache ActiveMQ Artemis) delivering mandatory regulatory reporting to an external API, processing \textbf{thousands of transactions} per day-end batch while decoupling the platform from third-party API latency and ensuring retry-safe delivery.
+    \item Optimized PL/SQL and database performance for a high-volume travel-booking platform, reducing agent-facing report generation from \textbf{$\sim$90s to $\sim$10s} and cutting query execution time by \textbf{$\sim$50\%} on large flight and hotel datasets.
+\end{itemize}
 
-%-----------EXPERIENCE-----------------
-\section{Work Experience}
-\resumeSubHeadingListStart
-\vspace{0pt}\item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{Axelate Solutions — Software Engineer} & \textit{\small Hybrid | Jun 2025 - Present} \\
-  \end{tabular*}\vspace{-2pt}
+\jobentry{Inoesis Technologies}{Software Developer Intern}{Remote}{Aug 2021 -- Feb 2022}
+\begin{itemize}
+    \item Built \textbf{10+} Django REST API endpoints and integrated Twilio Video for teleconsultation and appointment-management features in a healthcare application, working full-stack with Django's server-side templating.
+\end{itemize}
 
- \resumeItemListStart
-        \item{Developed domain-driven backend services for a multi-tenant B2B SaaS platform using Java 21, Spring Boot, and Spring Modulith, applying Domain-Driven Design to model business capabilities and enforce modular boundaries, enabling independent feature evolution and preparing the platform for future microservice adoption.}
-        \item{Developed secure access controls, managed PostgreSQL schema evolution, and maintained engineering quality using JWT, OTP, DPoP, Liquibase, automated testing, and quality gates to protect customer data, support reliable product evolution, and increase release confidence.}
-        \item{Delivered integrations with external business platforms, collaborating with stakeholders and third-party vendors to translate requirements, navigate ambiguous API documentation, resolve production issues, and support critical business operations.}
-        \item{Applied AI-native development practices across engineering workflows, creating domain-focused documentation, commands, and guidelines that enabled context-aware AI assistance, accelerated delivery, and promoted consistent engineering standards across the team.}
-      \resumeItemListEnd
+% ============ PROJECTS ============
+\section*{Projects}
+\vspace{6pt}
+\begin{itemize}
+    \item \textbf{Personal Expense Tracker} --- Flask + PostgreSQL expense tracker with server-side rendered templates and a clean, minimal UI, self-deployed via automated CI/CD.
+    \item \textbf{Form Bot} --- Telegram bot (Python, Telegram Bot API, PostgreSQL) for lightweight form creation and response collection between creators and responders.
+\end{itemize}
 
-\vspace{0pt}\item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{Crayon Data — Associate Software Engineer} & \textit{\small Hybrid | Aug 2023 - Jun 2025} \\
-  \end{tabular*}\vspace{-2pt}
+% ============ SKILLS ============
+\section*{Skills \& Competencies}
+\vspace{6pt}
+\noindent\textbf{Core Technologies:} Java, Python, SQL, JavaScript, PostgreSQL, MongoDB, MinIO, Bash\par\vspace{3pt}
+\noindent\textbf{Frameworks:} Spring Boot, Spring Security, Spring Data JPA, GraphQL, React.js, Node.js, Django, Flask\par\vspace{3pt}
+\noindent\textbf{Engineering Practices:} CI/CD, Docker, GitHub Actions, SonarCloud, Liquibase, JUnit, Cucumber, Testcontainers, WireMock\par\vspace{3pt}
+\noindent\textbf{AI-Native Development:} Spec-Driven Development, Claude Code, MCP (GitHub \& Jira), Human Oversight\par
 
- \resumeItemListStart
-        \item{Developed GraphQL APIs with Hasura for a configuration-driven mobile platform and contributed to asynchronous bank transaction synchronization with external financial systems using Apache ActiveMQ Artemis, improving data access efficiency and integration reliability.}
-        \item{Enhanced the performance and security of a digital banking platform through database optimization, PL/SQL development, and application code protection techniques.}
-      \resumeItemListEnd
+% ============ EDUCATION ============
+\section*{Education}
+\jobentry{SSN College of Engineering, Chennai}{BE in Computer Science and Engineering --- GPA: 8.38}{}{Aug 2019 -- Jun 2023}
 
-\vspace{0pt}\item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{Inoesis Technologies — Software Developer Intern} & \textit{\small Remote | Aug 2021 - Feb 2022} \\
-  \end{tabular*}\vspace{-2pt}
-
- \resumeItemListStart
-        \item{Implemented Django-based REST APIs and integrated Twilio Video APIs for teleconsultation and appointment management features in healthcare applications.}
-      \resumeItemListEnd
-        
- \resumeSubHeadingListEnd
- 
- 
- %-----------PROJECTS AND CERTIFICATIONS-----------------
-\section{Projects and Certifications}
-      \href{https://personal-expense-management-app.onrender.com}{\textbf{Personal Expense Tracker}\ \faExternalLink} — Built a Flask and PostgreSQL-based expense tracking application with analytics dashboards, monthly insights, and automated CI/CD deployment, serving a growing user base.
-      
-      \vspace{1mm}
-      \href{https://telegram.me/formspot_bot}{\textbf{Form Bot}\ \faExternalLink} — Developed a Telegram-based form automation platform using Python, Telegram Bot API, and PostgreSQL, enabling efficient form creation and response management for active users.
-      
-      
-%-----------SKILLS-----------------
-\section{Skills \& Competencies}
-  \resumeSubHeadingListStart
-  \resumeSubItem{Core Technologies: }
-      {Java, Python, SQL, JavaScript, PostgreSQL, MongoDB, MinIO, Bash}
-      \resumeSubItem{Frameworks: }
-      {Spring Boot, Spring Security, Spring Data JPA, GraphQL, React.js, Node.js, Django, Flask}
-      \resumeSubItem{Engineering Practices: }
-      {SonarCloud, CI/CD, Docker, GitHub Actions, JUnit, Cucumber, Testcontainers, WireMock}
-      \resumeSubItem{AI-Native Development: }
-      {Spec-Driven Development, Claude Code, MCP (GitHub \& Jira), Human Oversight}
-
- \resumeSubHeadingListEnd
-
-
-%-----------EDUCATION----------------
-\section{Education}
-  \resumeSubHeadingListStart
-   \resumeSubheading
-      {SSN College Of Engineering}{Chennai}
-      {BE in Computer Science and Engineering; GPA: 8.38}{Aug 2019 - Jun 2023}
-      
-  \resumeSubHeadingListEnd
-      
-      
-  
-%-------------------------------------------
 \end{document}
